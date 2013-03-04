@@ -1,0 +1,31 @@
+input.entry {
+	height:500px;
+	width:600px;
+	}
+	
+h1 a{
+	text-decoration:none;
+	color:black;
+}
+
+	
+h1 a:hover{
+	text-decoration:none;
+	color:red;
+}
+
+ tr td a.past_story {
+	text-decoration:none;
+}
+
+#date_y{
+	width:30px;
+}
+
+#date_m{
+	width:30px;
+}
+
+#date_d{
+	width:30px;
+}
