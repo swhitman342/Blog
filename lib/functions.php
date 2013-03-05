@@ -6,8 +6,6 @@ function add($entries){
 	$story = story;
 }
 
-function format_date($entries){
-$date = date_d.date_.date_y;}
 
 function dropdown($entries){
 	$select = "<select name=\"$name\">";

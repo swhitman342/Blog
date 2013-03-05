@@ -1,4 +1,4 @@
-<?php session_start(); require ('config/app.php');require('lib/functions.php');?>
+<?php session_start(); require ('config/app.php');require('config/db.php'); require('lib/functions.php');?>
 <!DOCTYPE html>
 <html>
 <head>

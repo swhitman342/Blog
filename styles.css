@@ -29,3 +29,26 @@ h1 a:hover{
 #date_d{
 	width:30px;
 }
+
+.entry {
+	height:200px;
+	width:450px;
+}
+
+.control-group {
+	margin-left:none;
+}
+
+#datepicker{
+	width:75px;
+}
+
+.control-group {
+	width:540px;
+	float:left;
+}
+label.contol-label {
+	float:left;
+	display:block;
+	width:40px;
+}
