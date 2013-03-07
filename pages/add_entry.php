@@ -8,15 +8,15 @@
 		    $("#datepicker").datepicker();
 		  });
   	</script>
-   		 <input name="date" class="date" id="datepicker" placeholder="Date"/>
+   		 <?php echo input('date','Date','datepicker','datepicker.date.hasDatepicker')?>
 	</div> 
 	<div class="control-group">
-
-<input name="subject" type="text" placeholder="Subject"> <br/>
+		<?php echo input('subject','Subject','subject')?>
 	</div>
 	<div class="control-group">
 	<label class="control-label" for="entry"></label>
-<textarea name="entry" class="entry" placeholder="..."></textarea> <br/>
+<textarea id="story" name="story" class="story" placeholder="..."></textarea> <br/>
+
 	</div>
 <!-- 	<form action="upload_file.php" method="post" enctype=""> -->
 	<div class="control-group">

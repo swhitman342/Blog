@@ -3,15 +3,15 @@
 
 session_start();
 
-$required = array (
+$entries = array (
 		'date',
 		'subject',
-		'entry',
+		'story',
 		);
 
-extract($_POST);
 
-foreach($required as $r) {
+
+foreach($entries as $r) {
 	if(!isset($_POST[$r]) || $_POST[$r] == '') {
 		// store message into session
 
@@ -38,5 +38,23 @@ foreach($required as $r) {
 		//header('location:../?p=frontpage');
 	}
 }
+extract($_POST);
 
-$sql = "INSERT INTO entries(date,subject,entry) VALUES ('$date','$subject',$entry)";
+$conn = new mysqli('localhost','root','','blog');
+
+//$sql = "INSERT INTO entries (subject,entry) VALUES ('$subject',$entry)";
+$sql = "INSERT INTO  `blog`.`entries` (
+		`date` ,
+		`subject` ,
+		`story`
+)
+VALUES (
+		'$date',  '$subject',  '$story'
+)";
+
+
+// query DB
+$conn->query($sql);
+
+// Close connection
+$conn->close();
