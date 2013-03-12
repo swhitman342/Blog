@@ -8,14 +8,66 @@ h1 a{
 	color:black;
 }
 
-	
+div.view_story{
+	width:250px;
+
+
+}
+
+.story_view{
+	text-decoration:none;
+	color:black;
+	font-size:14pt;	
+		margin-left:20px;
+			background-color:#FAF4CF;
+			border-radius:12px;
+}
+
+.story_view:hover {
+	text-decoration:none;
+	color:black;
+}
+
+
 h1 a:hover{
 	text-decoration:none;
 	color:red;
 }
 
- tr td a.past_story {
+ tr td  {
 	text-decoration:none;
+	color:#E809E8;
+}
+tr td a:hover{
+	color:#F20A0A;
+	background-color:#700F70;
+	border-radius:10px;
+	text-decoration:none;
+	box-shadow:1px black;
+}
+
+tr td a.past_story{
+	color:#E8C31E;
+	background-color:#;
+	border-radius:10px;
+	text-decoration:none;
+	box-shadow:1px black;
+	padding:8px;
+}
+
+tr td a.past_story:hover{
+	color:#BA0909;
+	background-color:#;
+	border-radius:10px;
+	text-decoration:none;
+	box-shadow:1px black;
+	padding:8px;
+}
+
+tr .past_story_tr {
+	color:#0826CC;
+	background-color:white;
+
 }
 
 #date_y{

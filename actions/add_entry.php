@@ -6,7 +6,7 @@ session_start();
 $entries = array (
 		'date',
 		'subject',
-		'story',
+		'story'
 		);
 
 
@@ -24,7 +24,7 @@ foreach($entries as $r) {
 		$_SESSION['POST'] = $_POST;
 
 		//set location header
-		Header('location:../?p=add_entry');
+		header('location:../?p=add_entry');
 
 		//kill script
 		die();
@@ -35,26 +35,43 @@ foreach($entries as $r) {
 				'text' => 'Entry Successfully Added'
 		);
 
-		//header('location:../?p=frontpage');
+		header('location:../?p=past_entries');
 	}
 }
 extract($_POST);
 
-$conn = new mysqli('localhost','root','','blog');
+
 
 //$sql = "INSERT INTO entries (subject,entry) VALUES ('$subject',$entry)";
-$sql = "INSERT INTO  `blog`.`entries` (
-		`date` ,
-		`subject` ,
-		`story`
+$sql = "INSERT INTO entries (
+		date ,
+		subject ,
+		story
 )
 VALUES (
 		'$date',  '$subject',  '$story'
 )";
-
+$conn = new mysqli('localhost','root','','blog');
 
 // query DB
 $conn->query($sql);
+
+// check for a MySQL error
+if($conn->errno >0){
+	//put sql error into session
+	$error = "<strong>MySQL Error # {$conn->errno}</strong>";
+	$error .= "{$conn->error}<br/><strong>SQL:</strong>$sql";
+	$_SESSION['message'] = array(
+			'type'=> 'danger',
+			'text' => $error
+			);
+	//set location header
+	
+	//kill script
+	
+	die();
+	
+}
 
 // Close connection
 $conn->close();

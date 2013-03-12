@@ -1,9 +1,9 @@
-<pre><label>2013</label></pre>
+<pre><label><strong>2013</strong></label></pre>
 
-<table>
+<table class="table">
+
+<thead><tr><th>Subject</th><th>Story</th></tr></thead>
 <tbody>
-
-
 <?php
 extract($_POST);
 
@@ -21,11 +21,12 @@ while(($entry = $results->fetch_assoc()) != null) {
 	//$year = $date['0'].$date['1'].$date['2'];
 	$year = $date['0'];
 	
-	echo "<tr><td><a id=\"$year\"><strong>$subject</strong></td></tr><tr><td>$story</a></td></tr>";
+	echo "<tr class=\"past_story_tr\"><td><a class=\"past_story\"href=\"./?p=view_story&id=$entry_id\" id=\"$year\"><strong>$subject</strong></td><td>$story</a></td></tr>";
 	
 }
 $conn->close();
 ?>
+
 	</tbody>
 </table>
 <!-- <pre><label>...2012</label></pre>
