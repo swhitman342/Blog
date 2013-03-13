@@ -1,4 +1,4 @@
-<pre>POST: <?php print_r($_POST)?></pre>
+
 <?php $i=0;
 $i++;?>
 <h3>Blog to entertain and journalize the lives of you and your friends.!!</h3>
@@ -19,7 +19,7 @@ $i++;?>
 <?php 
 
 extract($_POST);
-$_POST['status'] = null;
+
 if ($_POST['status'] && $_POST['status'] != ''){
 	
 	$f = fopen('.\data\status.csv','a');
