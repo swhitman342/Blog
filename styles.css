@@ -46,6 +46,15 @@ tr td a:hover{
 	box-shadow:1px black;
 }
 
+tr td a{
+	color:#E8C31E;
+	background-color:#;
+	border-radius:10px;
+	text-decoration:none;
+	box-shadow:1px black;
+	padding:8px;
+}
+
 tr td a.past_story{
 	color:#E8C31E;
 	background-color:#;
@@ -70,6 +79,10 @@ tr .past_story_tr {
 
 }
 
+tr td.comments{
+	color:#575757;
+}
+
 #date_y{
 	width:30px;
 }
@@ -80,6 +93,13 @@ tr .past_story_tr {
 
 #date_d{
 	width:30px;
+}
+.span2{
+	margin-top:5px;
+}
+
+.navbar .btn-group .btn, .navbar .input-prepend .btn, .navbar .input-append .btn{
+	margin-top:5px;
 }
 
 .story {
